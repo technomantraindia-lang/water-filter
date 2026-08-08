@@ -2625,6 +2625,114 @@
           margin: 30px 0 50px;
         }
       }
+
+      @media (max-width: 1200px) {
+        .container {
+          width: min(100% - 36px, 1120px);
+        }
+        .section {
+          padding-block: 78px;
+        }
+        .testimonial-card {
+          width: min(700px, 78vw);
+          padding: 44px;
+        }
+        .testimonial-quote {
+          font-size: clamp(22px, 2.4vw, 30px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-banner img {
+          height: clamp(240px, 52vw, 360px);
+          object-fit: cover;
+        }
+        .section,
+        .products-section,
+        .testimonials-section,
+        .contact-section {
+          padding-block: 58px;
+        }
+        .title-premium,
+        .section-title,
+        h2 {
+          font-size: clamp(1.8rem, 8vw, 2.35rem);
+          line-height: 1.1;
+        }
+        .desc-premium,
+        .lead,
+        p {
+          max-width: 100%;
+        }
+        .testimonials-carousel-container {
+          height: 470px;
+          overflow: hidden;
+          perspective: none;
+        }
+        .testimonial-card {
+          width: min(100%, calc(100vw - 34px));
+          min-height: 390px;
+          padding: 32px 26px;
+          border-radius: 22px;
+        }
+        .testimonial-card.prev,
+        .testimonial-card.next {
+          opacity: 0;
+          pointer-events: none;
+        }
+        .testimonial-quote-mark {
+          top: 14px;
+          right: 22px;
+          font-size: 5rem;
+        }
+        .testimonial-badge {
+          font-size: 0.64rem;
+          padding: 6px 11px;
+        }
+        .testimonial-quote {
+          font-size: clamp(1.15rem, 5.2vw, 1.55rem);
+          line-height: 1.38;
+          letter-spacing: 0;
+        }
+        .carousel-controls {
+          gap: 18px;
+        }
+        .product-visual-panel {
+          height: 300px;
+        }
+        .product-image-main {
+          max-width: 82%;
+          max-height: 210px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          width: min(100% - 28px, 480px);
+        }
+        .hero-banner img {
+          height: 230px;
+        }
+        .testimonial-card {
+          min-height: 430px;
+          padding: 30px 22px;
+        }
+        .testimonial-author {
+          align-items: center;
+        }
+        .testimonial-author strong {
+          font-size: 0.98rem;
+        }
+        .testimonial-author span {
+          font-size: 0.82rem;
+        }
+        .pagination-track {
+          width: 92px;
+        }
+        .product-visual-panel {
+          height: 260px;
+        }
+      }
     </style>
     <link rel="stylesheet" href="components/layout.css" />
     <!-- GSAP & ScrollTrigger for premium scroll triggers -->

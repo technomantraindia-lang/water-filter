@@ -1032,10 +1032,13 @@
     @media (max-width: 540px) {
       h1 { font-size: clamp(2.65rem,16vw,4rem); }
       h2 { font-size: clamp(1.75rem, 8.5vw, 2.125rem); }
+      .section { padding: 62px 0; }
+      .hero-banner img { min-height: 220px; object-fit: cover; }
       .actions { display: grid; }
       .hero-frame { min-height: 330px; }
       .image-main { inset: 0 0 90px 0; }
       .story-visual { min-height: 380px; }
+      .story-main { inset: 0 0 72px 0; }
       .image-float { width: 58%; }
       .vertical-mark { display: none; }
       .industry-matrix { grid-template-columns: 1fr; }
@@ -1045,6 +1048,15 @@
       .stage-metric { padding: 9px; font-size: .66rem; }
       .stage-metric span { font-size: .92rem; }
       .contact-block { border-left: 0; padding-left: 0; border-top: 1px solid rgba(255,255,255,.18); padding-top: 24px; }
+      .mission-panel, .cta-grid { min-width: 0; }
+      .tech-list, .apps-tabs { overflow-wrap: anywhere; }
+    }
+    @media (max-width: 390px) {
+      .container { width: min(100% - 24px, 390px); }
+      h1 { font-size: clamp(2.35rem,15vw,3.4rem); }
+      h2 { font-size: clamp(1.62rem,8vw,1.95rem); }
+      .story-visual { min-height: 340px; }
+      .dark-stage { min-height: 360px; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
