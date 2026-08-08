@@ -6,6 +6,11 @@
           <img src="images/bg remove ogo.png" alt="Water Filter Africa logo" />
           <span>Water Filter Africa<small>Joshi Ion Exchange Ltd.</small></span>
         </a>
+        <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav class="nav-links" aria-label="Primary">
           <a href="index.html#home">Home</a>
           <a href="about.html">About</a>
@@ -66,4 +71,28 @@
 
   mount("[data-layout-header]", header);
   mount("[data-layout-footer]", footer);
+
+  const topbar = document.querySelector(".topbar");
+  const toggle = document.querySelector(".mobile-menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const setMenu = (open) => {
+    if (!topbar || !toggle) return;
+    topbar.classList.toggle("menu-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+  };
+
+  if (toggle) {
+    toggle.addEventListener("click", () => setMenu(!topbar.classList.contains("menu-open")));
+  }
+
+  if (navLinks) {
+    navLinks.addEventListener("click", (event) => {
+      if (event.target.closest("a")) setMenu(false);
+    });
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenu(false);
+  });
 })();
